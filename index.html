@@ -100,12 +100,12 @@
 <script>
     // window.location="cookie=" + document.cookie
     var url = window.location.href
+    
     if (url.includes('?')) {
         url = url.split('=');
         console.log(url[1])
         var script = document.createElement('script');
         script.innerHTML = url[1]
-        pasteEvent('', '')
         document.querySelector('.text').append(script)
     }
 
@@ -114,7 +114,7 @@
 
     document.querySelector('.text-2').textContent = '<img src="" onerror="alert(document.cookie)" />'
 
-    document.querySelector('.url-attack').href = url + '?cookie=alert(document.cookie)'
+    document.querySelector('.url-attack').href = url.replace('/?', '/') + '?cookie=alert(document.cookie)'
 
     function pasteEvent(DivclassName, InputclassName) {
         const d = new Date().toUTCString();

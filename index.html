@@ -114,7 +114,8 @@
 
     document.querySelector('.text-2').textContent = '<img src="" onerror="alert(document.cookie)" />'
 
-    document.querySelector('.url-attack').href = url.replace('/?', '/') + '?cookie=alert(document.cookie)'
+    var urlWithCookie = url + '?cookie=alert(document.cookie)'
+    document.querySelector('.url-attack').href = urlWithCookie.replace('/?', '?')
 
     function pasteEvent(DivclassName, InputclassName) {
         const d = new Date().toUTCString();

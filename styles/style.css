@@ -21,14 +21,15 @@ code {
 .header {
     position: fixed;
     width: 100%;
-    height: 50px;
-    border-bottom: 2px solid black;
+    height: 20px;
+    padding-bottom: 20px;
+    border-bottom: 2px solid white;
     border-radius: 20px;
 }
 
 .section-1 {
     margin: 30px;
-    padding-top: 100px;
+    padding-top: 80px;
 }
 .section-1 div {
     margin: 5px 0px;
@@ -41,6 +42,8 @@ code {
     font-weight: 600;
 }
 .input-form {
-    padding: 3px 0px;
-    width: 400px;
+    color: black;
+    font-weight: 600;
+    padding: 5px 10px;
+    width: min(400px, 90%);
 }

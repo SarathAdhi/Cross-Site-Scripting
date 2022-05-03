@@ -1,6 +1,6 @@
 body {
     margin: 0px;
-    color: white;
+    color: black;
     background-color: #1a1a1d;
     /* font-family: Copperplate Gothic; */
     font-family: Courier New;
@@ -11,34 +11,42 @@ body {
 }
 code {
     background-color: rgb(101, 100, 100);
-    padding: 3px 5px;
+    padding: 6px 8px;
     border-radius: 5px;
     color: white;
+    
 }
 .color-green {
     color: #5CDB95;
 }
 .header {
+    padding-top: 10px;
     position: fixed;
     width: 100%;
-    height: 20px;
-    padding-bottom: 20px;
+    height: 50px;
     border-bottom: 2px solid white;
-    border-radius: 20px;
+    border-radius: 0 0 20px 20px;
+    background-color: #1a1a1d;
 }
-
+.top {
+    padding-top: 50px;
+}
 .section-1 {
-    margin: 30px;
-    padding-top: 80px;
+    margin: 20px;
+    padding: 20px;
+    background-color: whitesmoke;
+    border-radius: 10px;
 }
 .section-1 div {
     margin: 5px 0px;
 }
 .section-1 h1 {
     font-size: 30px;
+    font-weight: 700;
 }
 .section-1 p {
     margin-top: 20px;
+    font-size: 20px;
     font-weight: 600;
 }
 .input-form {

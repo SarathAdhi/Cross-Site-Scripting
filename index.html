@@ -100,6 +100,8 @@
 <script>
     // window.location="cookie=" + document.cookie
     var url = window.location.href
+    if(url[url.length-1] === '/')
+        url = url.slice(0, -1)
     
     if (url.includes('?')) {
         url = url.split('=');
@@ -115,7 +117,7 @@
     document.querySelector('.text-2').textContent = '<img src="" onerror="alert(document.cookie)" />'
 
     var urlWithCookie = url + '?cookie=alert(document.cookie)'
-    document.querySelector('.url-attack').href = urlWithCookie.replace('/?', '?')
+    document.querySelector('.url-attack').href = urlWithCookie
 
     function pasteEvent(DivclassName, InputclassName) {
         const d = new Date().toUTCString();
@@ -128,7 +130,7 @@
         const res = await fetch("https://www.cloudflare.com/cdn-cgi/trace");
         const data = await res.text()
         let ipRegex = /[0-9]{1,3}.[0-9]{1,3}.[0-9]{1,3}.[0-9]{1,3}/
-        let ip = data.match(ipRegex)[0];
+        let ip = data.match(ipRegex);
         console.log('Your IP address is '+ip)
         document.cookie = `IP-Address = ${ip}; path=/`;
     }
